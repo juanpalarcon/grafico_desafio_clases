@@ -1,0 +1,9 @@
+{
+  "name": "grafico_clases_coffee",
+  "private": true,
+  "dependencies": {
+    "chart.js": "^3.4.0",
+    "chartkick": "^4.0.4",
+    "highcharts": "^9.1.2"
+  }
+}
