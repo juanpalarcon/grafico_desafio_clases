@@ -1,17 +1,132 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">Dashboard ventas</h1>
+    <table class="table align-middle shadow-lg p-3 mb-5 bg-body rounded">
+      <thead>
+        <tr>
+
+            <th class="my-5">Ventas mensuales de los ultimos 12 meses</th>
 
 
 
-<%= column_chart @last12m_sale %>
-<%= column_chart @last12m_sale_active %>
-<%= column_chart @last12m_sale_count %>
-<%= column_chart @last12m_sale_average %>
-<%= pie_chart @last12m_sale_pie %>
-<%= pie_chart @last6m_sale_pie %>
-<%= pie_chart @last3m_sale_pie %>
-<%= pie_chart @last1m_sale_pie %>
-<%= pie_chart @last12m_sale_pie_blend %>
+            <th class="my-5">
+              Cantidad de ventas mensuales de los ultimos 12 meses
+            </th>
+
+
+            <th class="my-5">
+              Promedio de ventas mensuales de los ultimos 12 meses
+            </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="px-5"><%= column_chart @last12m_sale %></td>
+          <td class="px-5 shadow-lg p-3 mb-5 bg-body rounded">
+            <%= column_chart @last12m_sale_count %>
+          </td>
+          <td class="px-5"><%= column_chart @last12m_sale_average %></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th class="col">
+            Cantidad de ventas segun origen del cafe de los ultimos 12 meses
+          </th>
+          <th class="col">
+            Cantidad de ventas segun origen del cafe de los ultimos 6 meses
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last12m_sale_pie %>
+          </td>
+          <td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last6m_sale_pie %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th>
+            Cantidad de ventas segun origen del cafe de los ultimos 3 meses
+          </th>
+          <th>Cantidad de ventas segun origen del cafe del ultimo mes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last3m_sale_pie %>
+          </td>
+          <td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last1m_sale_pie %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1 class="text-center"></h1>
+    <table class="container table align-middle">
+      <thead>
+        <tr>
+          <th>Cantidad de ventas de mezclas de cafe de los ultimos 12 meses</th>
+          <th>Cantidad de ventas de mezclas de cafe de los ultimos 6 meses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <div class="container"><td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last12m_sale_pie_blend %>
+          </td>
+          <td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last6m_sale_pie_blend %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="container table align-middle">
+      <thead>
+        <tr>
+          <th>Cantidad de ventas de mezclas de cafe de los ultimos 3 meses</th>
+          <th>Cantidad de ventas de mezclas de cafe del ultimo mes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <div class="container">
+            <td class="shadow-lg p-3 mb-5 bg-body rounded">
+              <%= pie_chart @last3m_sale_pie_blend %>
+            </td>
+          </div>
+          <td class="shadow-lg p-3 mb-5 bg-body rounded">
+            <%= pie_chart @last1m_sale_pie_blend %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- <%= column_chart @last12m_sale %> -->
+<!-- <%= column_chart @last12m_sale_count %> -->
+<!-- <%= column_chart @last12m_sale_average %> -->
+<!-- <%= pie_chart @last12m_sale_pie %> -->
+<!-- <%= pie_chart @last6m_sale_pie %> -->
+<!-- <%= pie_chart @last3m_sale_pie %> -->
+<!-- <%= pie_chart @last1m_sale_pie %> -->
+<!-- <%= pie_chart @last12m_sale_pie_blend %>
 <%= pie_chart @last6m_sale_pie_blend %>
 <%= pie_chart @last3m_sale_pie_blend %>
 <%= pie_chart @last1m_sale_pie_blend %>
-
-
+ -->

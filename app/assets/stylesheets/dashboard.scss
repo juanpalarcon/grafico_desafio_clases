@@ -1,3 +1,23 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  color: lemonchiffon;
+  font-family: "Dancing Script", cursive;
+  text-decoration: underline;
+}
+
+th {
+  color: cornsilk;
+  font-family: "Dancing Script", cursive;
+
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.color {
+  background-image: url("https://images.adsttc.com/media/images/5e3c/5fa6/3312/fd25/4b00/00a7/slideshow/15a.jpg?1581014942");
+}
+
+.my-5 {
+  color: lightsalmon;
+}
